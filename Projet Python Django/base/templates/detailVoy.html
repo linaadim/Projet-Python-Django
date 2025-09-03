@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+
+{% block content %}
+<div class="container mt-3">
+    <h1> Voici plus de détail sur votre voyage de reve. </h1>
+    <br>
+    <hr>
+    {% for v in voy %}
+    <h4 class="text-center" ><U><I>{{v.pays}}</I></U></h4>
+    <br>
+    <div class="col-md-4" class="centered-element">
+        <img src="{{v.image.url}}" class="card-img" alt="">
+      </div>
+    {% endfor %}
+{% endblock content %}
+    
